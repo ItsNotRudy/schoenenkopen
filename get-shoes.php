@@ -10,11 +10,6 @@
 	#	PDO::MYSQL_ATTR_SSL_CA =>'/var/www/ssl/ca.pem'
 	#);
 
-	echo $hostname;
-	echo $username;
-	echo $dbname;
-	echo $password;
-
 	try {
 		$conn = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
 		// set the PDO error mode to exception

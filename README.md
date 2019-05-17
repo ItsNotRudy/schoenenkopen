@@ -15,7 +15,7 @@
 ## Documentation
 
 ### Database
-Stores data and image path in MySQL Server for Azure. URL can also be used for object/blob storage. Configuration example is included in config.example.php`
+Stores data and image path in MySQL Server for Azure. URL can also be used for object/blob storage. Configuration example is included in `config.example.php`
 ```
 +-----------+---------------+--------------------------+--------------+---------------+
 | schoen_id | schoen_naam   | schoen_url               | schoen_prijs | schoen_desc   |

@@ -3,6 +3,8 @@
 
 Tech used:
 - Azure MySQL 5.7
+- Azure Load Balancer
+- Azure Virtual Machine (Ubuntu 18.04 LTS)
 - Nginx 1.14.0
 - PHP 7.2.17
 - jQuery 3.4.1

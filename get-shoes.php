@@ -12,6 +12,7 @@
 
 	try {
 		$conn = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password, $options);
+		echo $conn;
 		// set the PDO error mode to exception
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		echo "Connected successfully"; 
@@ -27,7 +28,4 @@
 	$statement = $pdo->prepare("SELECT * FROM schoenen");
 	$statement->execute();
 	$data = json_encode($statement->fetchAll(PDO::FETCH_ASSOC));
-
-	echo $conn;
-	echo $data;
 ?>

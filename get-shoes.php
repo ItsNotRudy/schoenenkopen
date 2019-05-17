@@ -7,7 +7,7 @@
 	$options = array(
 		PDO::MYSQL_ATTR_SSL_KEY =>'/var/lib/mysql/client-key.pem',
 		PDO::MYSQL_ATTR_SSL_CERT => '/var/lib/mysql/client-cert.pem',
-		PDO::MYSQL_ATTR_SSL_CA =>'/var/lib/mysql/ca-cert.pem'
+		PDO::MYSQL_ATTR_SSL_CA =>'/var/lib/mysql/ca.pem'
 	);
 
 	try {

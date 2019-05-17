@@ -13,7 +13,7 @@
 		$statement->execute();
 		#$data = json_encode($statement->fetchAll(PDO::FETCH_ASSOC));
 		$data = $statement->fetchAll(PDO::FETCH_ASSOC);
-		echo $data;
+		print_r($data);
 
 		
 	}

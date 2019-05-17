@@ -4,11 +4,6 @@
 	$username = $database['username'];
 	$dbname = $database['dbname'];
 	$password = $database['password'];
-	#$options = array(
-	#	PDO::MYSQL_ATTR_SSL_KEY =>'/var/www/ssl/client-key.pem',
-	#	PDO::MYSQL_ATTR_SSL_CERT => '/var/www/ssl/client-cert.pem',
-	#	PDO::MYSQL_ATTR_SSL_CA =>'/var/www/ssl/ca.pem'
-	#);
 
 	try {
 		$conn = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
@@ -23,4 +18,6 @@
 	$statement = $pdo->prepare("SELECT * FROM schoenen");
 	$statement->execute();
 	$data = json_encode($statement->fetchAll(PDO::FETCH_ASSOC));
+
+	echo $data;
 ?>

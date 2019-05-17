@@ -4,7 +4,7 @@
 	$username = $database['username'];
 	$dbname = $database['dbname'];
 	$password = $database['password'];
-	$options = , array(
+	$options = array(
 		PDO::MYSQL_ATTR_SSL_KEY    =>'/etc/mysql/ssl/client-key.pem',
 		PDO::MYSQL_ATTR_SSL_CERT=>'/etc/mysql/ssl/client-cert.pem',
 		PDO::MYSQL_ATTR_SSL_CA    =>'/etc/mysql/ssl/ca-cert.pem'

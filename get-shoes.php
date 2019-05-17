@@ -9,9 +9,10 @@
 		$conn = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
 		// set the PDO error mode to exception
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		$statement = $conn->prepare("SELECT * FROM schoenen");
+		$statement = $conn->prepare("SELECT JSON_OBJECT(*) FROM schoenen");
 		$statement->execute();
-		$data = json_encode($statement->fetchAll(PDO::FETCH_ASSOC));
+		#$data = json_encode($statement->fetchAll(PDO::FETCH_ASSOC));
+		$data = $statement->fetchAll(PDO::FETCH_ASSOC);
 		echo $data;
 
 		
@@ -20,3 +21,7 @@
 		echo "Connection failed: " . $e->getMessage();
 	}
 ?>
+
+UPDATE schoenen 
+SET schoen_prijs = '89,99' 
+WHERE schoen_id > 0;

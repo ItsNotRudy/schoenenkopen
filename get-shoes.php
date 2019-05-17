@@ -11,10 +11,12 @@
 		$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		echo "Connected successfully"; 
 		echo "Test";
-		$statement = $pdo->prepare("SELECT * FROM schoenen");
+		$statement = $conn->prepare("SELECT * FROM schoenen");
 		$statement->execute();
 		$data = json_encode($statement->fetchAll(PDO::FETCH_ASSOC));
+		echo $data;
 
+		
 	}
 	catch(PDOException $e) {
 		echo "Connection failed: " . $e->getMessage();

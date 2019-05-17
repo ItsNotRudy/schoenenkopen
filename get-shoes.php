@@ -21,7 +21,3 @@
 		echo "Connection failed: " . $e->getMessage();
 	}
 ?>
-
-UPDATE schoenen 
-SET schoen_prijs = '89,99' 
-WHERE schoen_id > 0;

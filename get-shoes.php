@@ -15,7 +15,7 @@
 		$statement->execute();
 		$data = json_encode($statement->fetchAll(PDO::FETCH_ASSOC));
 	
-		echo $data;
+		echo $statement;
 	}
 	catch(PDOException $e) {
 		echo "Connection failed: " . $e->getMessage();

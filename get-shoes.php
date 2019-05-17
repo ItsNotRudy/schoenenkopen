@@ -6,9 +6,8 @@
 	$password = $database['password'];
 	$options = array(
 		PDO::MYSQL_ATTR_SSL_KEY    =>'/etc/mysql/ssl/client-key.pem',
-		PDO::MYSQL_ATTR_SSL_CERT=>'/etc/mysql/ssl/client-cert.pem',
+		PDO::MYSQL_ATTR_SSL_CERT =>'/etc/mysql/ssl/client-cert.pem',
 		PDO::MYSQL_ATTR_SSL_CA    =>'/etc/mysql/ssl/ca-cert.pem'
-		)
 	);
 
 	try {
